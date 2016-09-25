@@ -34,7 +34,7 @@ import HappyWith
 
 #### `happy_with` macro
 
-```
+```elixir
 happy_with do
   {:ok, friend} <- retrieve_friend
   name = String.downcase(friend)
