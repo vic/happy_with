@@ -3,6 +3,8 @@ defmodule HappyWith do
   @doc ~S"""
   Rewrites the given block and else clauses into Elixir's standard `with` form.
 
+  ```elixir
+
     iex> import HappyWith
     iex> happy_with do
     ...>   {:ok, name} <- {:ok, "joSE"}
@@ -11,9 +13,12 @@ defmodule HappyWith do
     ...> end
     "jose"
 
+  ```
+
 
   You can also provide else clauses to the `with` form.
 
+  ```elixir
 
     iex> import HappyWith
     iex> happy_with do
@@ -24,6 +29,7 @@ defmodule HappyWith do
     ...> end
     "luis"
 
+  ```
 
   """
   defmacro happy_with([do: {:__block__, _, body}, else: elses]), do: rewrite(body, elses)
