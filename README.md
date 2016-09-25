@@ -10,7 +10,7 @@ place commas between all the with expressions.
 
 Back then before elixir 1.2 release, I implemented [happy](http://github.com/vic/happy) using case
 expressions, it leaked variables as normal case expressions would do, and _overriding_ the standard
-`=` operator turned out to have some unexpected cases. Also, after using standard `with` a bit, I
+`=` operator turned out to have some [unexpected](https://github.com/vic/happy/issues/7) [issues](https://github.com/vic/happy/issues/8). Also, after using standard `with` a bit, I
 really got to like it, except for the fact of having to place commas after expressions, so I wrote
 `happy_with` which is a *very* tiny macro that just rewrites to Elixir's standard `with` special form.
 
