@@ -14,6 +14,10 @@ expressions, it leaked variables as normal case expressions would do, and _overr
 really got to like it, except for the fact of having to place commas after expressions, so I wrote
 `happy_with` which is a [*very* tiny macro](https://github.com/vic/happy_with/blob/master/lib/happy_with.ex#L42) that just rewrites to Elixir's standard `with` special form.
 
+This package implements the *tags* feature originally found in `happy_path`.
+
+For more examples see [docs](https://hexdocs.pm/happy_with/HappyWith.html#happy_with/1)
+
 ## Installation
 
 [Available in Hex](https://hex.pm/packages/happy_with), the package can be installed as:
@@ -22,7 +26,7 @@ really got to like it, except for the fact of having to place commas after expre
 
 ```elixir
 def deps do
-  [{:happy_with, "~> 0.0.1"}]
+  [{:happy_with, "~> 1.0.0"}]
 end
 ```
         
@@ -58,3 +62,4 @@ end
 ```
 
 IMHO the first one reads better.
+
