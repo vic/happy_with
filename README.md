@@ -63,3 +63,43 @@ end
 
 IMHO the first one reads better.
 
+
+## Examples
+
+Rewrites the given block and else clauses into Elixir's standard `with` form.
+
+```elixir
+iex> import HappyWith
+iex> happy_with do
+...>   {:ok, name} <- {:ok, "joSE"}
+...>   lower = String.downcase(name)
+...>   lower
+...> end
+"jose"
+```
+
+You can also provide else clauses to the `with` form.
+
+```elixir
+iex> import HappyWith
+iex> happy_with do
+...>   {:ok, name} <- {:error, :nobody}
+...>   _never_reached = String.downcase(name)
+...> else
+...>   {:error, _} -> "luis"
+...> end
+"luis"
+```
+
+You can also use tags a feature from the [happy](http://github.com/vic/happy) project.
+
+```elixir
+iex> import HappyWith
+iex> happy_with do
+...>   @something {:ok, name} when is_binary(name) and length(name) > 3 <- {:error, :nobody}
+...>   _never_reached = String.downcase(name)
+...> else
+...>   {:something, {:error, _}} -> "could not fetch name"
+...> end
+"could not fetch name"
+```
