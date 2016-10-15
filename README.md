@@ -1,5 +1,7 @@
 # HappyWith
 
+<a href="https://travis-ci.org/vic/happy_with"><img src="https://travis-ci.org/vic/happy_with.svg"></a>
+
 Tiny syntax sugar around Elixir's `with` special form.
 
 #### Why ?
