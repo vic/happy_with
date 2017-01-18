@@ -43,8 +43,7 @@ import HappyWith
 ```elixir
 happy_with do
   {:ok, friend} <- retrieve_friend
-  name = String.downcase(friend)
-  name
+  String.downcase(friend)
 else
   _ -> "nobody"
 end
@@ -54,10 +53,9 @@ rewrites into standard `with` form.
 Only the last expression in the happy_with block is given to with's do.
 
 ```elixir
-with({:ok, friend} <- retrieve_friend,
-     name = String.downcase(friend))
+with({:ok, friend} <- retrieve_friend)
 do
-  name
+  name = String.downcase(friend)
 else
   _ -> "nobody"
 end
