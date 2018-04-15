@@ -29,7 +29,7 @@ For more examples see [docs](https://hexdocs.pm/happy_with/HappyWith.html#happy_
 
 ```elixir
 def deps do
-  [{:happy_with, "~> 1.0.0"}]
+  [{:happy_with, "~> 1.0"}]
 end
 ```
         
