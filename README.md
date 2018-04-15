@@ -1,8 +1,7 @@
 # HappyWith
 
-<a href="https://travis-ci.org/vic/happy_with"><img src="https://travis-ci.org/vic/happy_with.svg"></a>
-[![help maintain this lib](https://img.shields.io/badge/looking%20for%20maintainer-DM%20%40vborja-663399.svg)](https://twitter.com/vborja)
-
+[![Travis](https://img.shields.io/travis/vic/happy_with.svg)](https://travis-ci.org/vic/happy_with)
+[![Hex.pm](https://img.shields.io/hexpm/v/happy_with.svg?style=flat-square)](https://hexdocs.pm/happy_with)
 
 Tiny syntax sugar around Elixir's `with` special form.
 
