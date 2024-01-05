@@ -38,7 +38,7 @@ defmodule HappyWith do
   defmacro happy_with([do: {:__block__, _, body}]), do: rewrite(body, nil)
 
   defp rewrite(body, elses) when length(body) > 1 do
-    exprs = Enum.slice(body, 0..-2) |> rewrite_tags
+    exprs = Enum.slice(body, 0..-2//1) |> rewrite_tags
     do_last = [do: Enum.at(body, -1)]
     else_clauses = elses && [else: elses] || []
     {:with, [], exprs ++ [do_last ++ else_clauses]}
